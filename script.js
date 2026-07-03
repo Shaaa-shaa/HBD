@@ -21,8 +21,8 @@ const transitionLayer = document.getElementById("cloudTransition");
 const transitionText = document.getElementById("transitionText");
 const toast = document.getElementById("toast");
 
-const musicChoice = document.getElementById("musicChoice");
-const playSongBtn = document.getElementById("playSongBtn");
+const musicChoice = song.src = "En-Jeevan.mp3"("musicChoice");
+const playSongBtn = song.src = "En-Jeevan.mp3"("playSongBtn");
 const silentBtn = document.getElementById("silentBtn");
 const musicPlayer = document.getElementById("musicPlayer");
 const song = document.getElementById("song");
