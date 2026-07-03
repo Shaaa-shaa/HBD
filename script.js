@@ -8,7 +8,41 @@
   Replace SONG_URL with an authorized hosted audio source.
   Direct download links may fail due to CORS, expiry, or copyright restrictions.
 */
-const SONG_URL = song.src = "En-Jeevan.mp3"
+const song = document.getElementById("song");
+
+const playBtn = document.getElementById("playSongBtn");
+const silentBtn = document.getElementById("silentBtn");
+
+const musicPlayer = document.getElementById("musicPlayer");
+const toggleMusic = document.getElementById("toggleMusic");
+const muteMusic = document.getElementById("muteMusic");
+
+playBtn.addEventListener("click", () => {
+  musicPlayer.classList.remove("hidden");
+
+  song.play().catch(err => {
+    console.log("Playback blocked:", err);
+  });
+});
+
+silentBtn.addEventListener("click", () => {
+  musicPlayer.classList.remove("hidden");
+});
+
+toggleMusic.addEventListener("click", () => {
+  if (song.paused) {
+    song.play();
+    toggleMusic.textContent = "⏸";
+  } else {
+    song.pause();
+    toggleMusic.textContent = "▶";
+  }
+});
+
+muteMusic.addEventListener("click", () => {
+  song.muted = !song.muted;
+  muteMusic.textContent = song.muted ? "🔇" : "🔊";
+});
 
 const pages = Array.from(document.querySelectorAll(".page"));
 const sky = document.getElementById("sky");
