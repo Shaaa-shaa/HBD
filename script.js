@@ -8,7 +8,7 @@
   Replace SONG_URL with an authorized hosted audio source.
   Direct download links may fail due to CORS, expiry, or copyright restrictions.
 */
-const SONG_URL = music.mp3
+const SONG_URL = song.src = "En-Jeevan.mp3"
 
 const pages = Array.from(document.querySelectorAll(".page"));
 const sky = document.getElementById("sky");
